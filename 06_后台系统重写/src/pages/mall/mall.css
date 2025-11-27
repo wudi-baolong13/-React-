@@ -1,0 +1,58 @@
+.mall-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* 允许卡片换行 */
+    justify-content: center;
+    /* 水平居中 */
+    align-content: center;
+    /* 垂直居中当有多行时 */
+    gap: 20px;
+    /* 卡片之间的间距 */
+    padding: 20px;
+    /* 给整个容器添加一些内边距，可选 */
+    height: 100%;
+    /* 确保容器高度能够撑满父元素，以便垂直居中生效 */
+}
+
+.mall-container .ant-card {
+    /* 确保卡片内容不会导致水平溢出 */
+    box-sizing: border-box;
+    transition: transform 0.2s;
+    max-width: calc(100% / 3 - 20px);
+}
+
+.phone_img {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    height: 100%;
+    /* 确保有高度，才能垂直居中 */
+}
+
+.phone_img Image {
+    max-width: 60%;
+    /* 缩小为原来容器的80% */
+    height: auto;
+    /* 保持宽高比例 */
+    display: block;
+    /* 避免底部空白间隙 */
+}
+
+.phone_text {   
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.phone_text .name {
+    font-size: 15px;
+    text-align: center;
+}
+
+.phone_text .price {
+    font-size: 20px;
+    text-align: center;
+}
